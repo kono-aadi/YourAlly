@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourAlly</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/index_style.css'%}" />
+    
+    <style id="Style_BODY">
+      
+    </style>
+    <style>
+      body {
+        display: grid;
+        background-image: url("{%static 'images/index_page_bg.png'%}");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+
+  <body id="Body" style="text-align: center">
+    <br />
+    <form action="loginpage" class="log_in"><button>Log in</button></form>
+    <form action="signuppage" class="sign_up"><button>Sign up</button></form>
+
+    <div class="blur_bg"></div>
+    <img class="logo" src="{% static 'images/logo.jpeg'%}" alt="logo" />
+    <h1 class="name">YourAlly</h1>
+    <p class="text" id="Para">
+      Welcome to YourAlly, the ultimate companion for efficient task management
+      and seamless productivity. YourAlly is a user-friendly, to-do list
+      platform designed to elevate your organization game, track your progress
+      and conquer your tasks like a pro! Our aim is to help you stay organized,
+      focused, and in control of your responsibilities.
+    </p>
+
+    <script src="{% static 'js/index_page_js.js'%}"></script>
+  </body>
+</html>

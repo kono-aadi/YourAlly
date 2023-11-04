@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourAlly</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/Main_page_style.css'%}" />
+  </head>
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: repeat(32, 56.2px);
+      grid-template-rows: repeat(18, 54px);
+      background-image: url("{% static 'images/main_page_bg.jpg' %}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+
+  <body>
+    <img class="logo" src="{% static 'images/logo.jpeg' %}" alt="logo" />
+    <h1 class="name">YourAlly</h1>
+
+    <form action="mainpagedailytask" class="one_day_task">
+      <button>Daily task</button>
+    </form>
+    <form action="mainpageonetimetask" class="daily_task">
+      <button>One Day Task</button>
+    </form>
+
+    <button class="add_task" id="add_task" onclick="add_task()">+</button>
+    <h1 id="List_of_Tasks_main" style="display: none; color: red; z-index: 4">
+      {{List_of_Tasks_main}}
+    </h1>
+    <h1 id="List_of_Tasks" style="display: none;  grid-area: 5/5/20/20; color: red; z-index: 4">
+      {{Obj}}
+    </h1>
+    <!--
+
+    <div class="Graph"></div>
+
+    <pre class="days">Sn  Mn  Ts  Wd  Th  Fr  St</pre>
+-->
+    <div id="pop_up">
+      <form action="" method="POST" id="Add_task_input" autocomplete="off">
+        {%csrf_token%}
+        <label
+          for="Add_task_input_Text_heading"
+          id="Add_task_input_Text_heading_label"
+          >Task Heading</label
+        >
+        <textarea
+          id="Add_task_input_Text_heading"
+          cols="30"
+          rows="10"
+          name="Task_heading"></textarea>
+        <label
+          for="Add_task_input_Text_heading"
+          id="Add_task_input_Text_description_label"
+          >Task Description</label
+        >
+        <textarea
+          id="Add_task_input_Text_description"
+          cols="30"
+          rows="10"
+          name="Task_description"></textarea>
+        <button
+          id="Add_task_input_Text_sumbit"
+          type="submit"
+          onclick="Submit()">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <img class="user" src="{%static 'images/user.png'%}" alt="User" />
+    </h1>
+    <div id="box">
+
+      {% for i in List_of_Tasks_main%}
+      <div class="main">
+        <div class="card">
+
+            <div class="task_name">Task: {{i.0}}</div>
+            <div class="date">id: {{i.3}}</div>
+            <div class="time">Time: {Time}</div>
+            <div class="content">Description:<br> {{i.1}}</div>
+            <a href= "{% url 'delete-task' i.3 %}" class="delete"> <div ><button>Delete</button></div></a>
+            <a href= "{% url 'delete-task' i.3 %}" class="completed"> <div ><button>Done</button></div></a>
+        </div>
+      </div>
+
+        {% endfor %}
+
+
+    </div>
+
+
+  </body>
+  <script src="{%static 'js/Main_page_js.js'%}"></script>
+</html>

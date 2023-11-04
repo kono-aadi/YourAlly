@@ -1,0 +1,102 @@
+:root {
+  --border_radius: 15px;
+  --label_font_size: 20px;
+  --text_font_size: 30px;
+  --form_width: 14.43px;
+  --form_height: 19.2px;
+  --text_box_height: 40px;
+  --text_indent: 10px;
+  --border_size: 1px;
+}
+
+.blur_bg {
+  border-radius: var(--form_height);
+  grid-area: 4/22/16/31;
+  z-index: -1;
+  background-color: transparent;
+  border: 0.001px white solid;
+  backdrop-filter: blur(var(--text_indent));
+}
+* {
+  font-family: monospace;
+  color: white;
+}
+
+.Home{
+  grid-area: 1/32/1/34;
+  margin-top: var(--text_indent);
+}
+
+form {
+  grid-area: 4/22/7/30;
+  display: grid;
+  grid-template-columns: repeat(34, var(--form_width));
+  grid-template-rows: repeat(34, var(--form_height));
+}
+
+p {
+  grid-area: 7/4/13/20;
+  font-size: var(--text_font_size);
+}
+
+input {
+  margin: 0px;
+  background-color: transparent;
+  border: 0.001px solid rgba(255, 255, 255, 0.782);
+  border-radius: var(--border_radius);
+  height: var(--text_box_height);
+  font-size: var(--form_width);
+  width: 100%;
+  margin-top: var(--form_height);
+}
+label {
+  font-size: var(--form_height);
+}
+input::placeholder {
+  text-indent: var(--text_indent);
+  color: rgba(255, 255, 255, 0.713);
+}
+button {
+  background-color: white;
+  border-radius: var(--border_radius);
+  width: 100%;
+  height: 64%;
+  align-self: center;
+  color: black;
+  border: none;
+  font-size: var(--form_height);
+}
+
+.name {
+  grid-area: 1/3/3/6;
+  margin-left: -15%;
+  margin-top: var(--text_indent);
+  font-size: var(--text_box_height);
+  
+}
+
+.logo {
+  margin: var(--text_indent);
+  width: 100%;
+  height: 100%;
+}
+
+.fname {
+  grid-area: 6/3/9/16;
+}
+.Lname {
+  grid-area: 6/18/9/32;
+}
+.email {
+  grid-area: 13/3/18/32;
+}
+
+.username {
+  grid-area: 20/3/26/16;
+}
+.password {
+  grid-area: 20/18/26/32;
+}
+.submit {
+  grid-area: 27/26/30/32;
+}

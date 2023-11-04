@@ -1,0 +1,198 @@
+.user {
+  width: 70px;
+  height: 70px;
+  grid-area: 1/33/1/35;
+}
+
+button {
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.daily_task {
+  grid-area: 1/27/2/29;
+}
+
+.one_day_task {
+  grid-area: 1/30/2/32;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin: 15px;
+}
+
+.name {
+  color: white;
+  grid-column-start: 3;
+  margin-left: 20px;
+}
+
+.add_task {
+  grid-area: 3/33/4/34;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 50px;
+}
+
+.Graph {
+  grid-area: 6/25/13/34;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.days {
+  color: white;
+  grid-area: 13/25/13/34;
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+input:checked {
+  background-color: red;
+  border-color: red;
+  appearance: none;
+  align-self: center;
+}
+.label {
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#box {
+  grid-area: 4/1 / auto/36;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.main {
+  width: 380px;
+  background-color: transparent;
+  border: white solid 1px;
+  border-radius: 7%;
+  margin: 20px;
+  backdrop-filter: blur(8px);
+  font-size: 20px;
+}
+.card {
+  color: white;
+  display: grid;
+  grid-template-rows: repeat(10, 30px);
+  grid-template-columns: repeat(10, 33px);
+  margin: 20px;
+}
+.date {
+  grid-column-start: 8;
+  grid-column-end: 11;
+}
+.time {
+  grid-column-start: 8;
+  grid-column-end: 11;
+  grid-row-start: 2;
+}
+.task_name {
+  grid-area: 1/1 / auto/6;
+}
+.content {
+  grid-area: 4/1/9/6;
+}
+.delete {
+  grid-area: 10/9;
+}
+.delete img {
+  width: 40px;
+  height: 40px;
+}
+
+.completed {
+  grid-area: 10/7;
+}
+
+.streaks {
+  grid-area: 10/1/10/6;
+}
+.delete button {
+  margin-top: -10px;
+  margin-left: 20px;
+  width: 60px;
+  height: 30px;
+}
+
+.completed button {
+  margin-top: -10px;
+  margin-left: 20px;
+  width: 50px;
+  height: 30px;
+}
+
+.calendar {
+  grid-column-start: 10;
+}
+.streak_count {
+  grid-area: 10/4/10/6;
+}
+
+#pop_up {
+  width: 1000px;
+  height: 791.13px;
+  grid-area: 4/9/18/28;
+  z-index: 1;
+  display: block;
+}
+
+#Add_task_input {
+  border-radius: 50px;
+  display: grid;
+  grid-template-rows: repeat(24, 32.8px);
+  grid-template-columns: repeat(14, 73.1px);
+  backdrop-filter: blur(5px);
+  border: 2px solid white;
+}
+
+#Add_task_input_Text_heading {
+  grid-area: 5/2/8/13;
+  border-radius: 10px;
+  border: white solid 2px;
+  background: transparent;
+  font-size: 18px;
+  color: white;
+}
+#Add_task_input_Text_heading_label {
+  font-size: 25px;
+  color: white;
+  grid-area: 3/2/3/10;
+}
+#Add_task_input_Text_description {
+  color: white;
+  grid-area: 12/2/19/13;
+  border-radius: 10px;
+  padding: 10px;
+  border: white solid 2px;
+  font-size: 18px;
+  background: transparent;
+}
+#Add_task_input_Text_description_label {
+  font-size: 25px;
+  color: white;
+  grid-area: 10/2/10/10;
+}
+
+#Add_task_input_Text_sumbit {
+  grid-area: 20/12 / auto/14;
+  color: black;
+}

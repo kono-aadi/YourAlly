@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourAlly</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/log_in_style.css' %}" />
+    <style id="Style_BODY"></style>
+  </head>
+
+<style>  
+</style>
+
+  <style>
+    body {
+      display: grid;
+      background-image: url("{% static 'images/user_auth_page_bg.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+    }
+  </style>
+
+  <body>
+    <a href="indexpage">
+      <img class="logo" src="{% static 'images/logo.jpeg' %}" alt="logo" />
+    </a>
+    <h1 class="name">YourAlly</h1>
+
+    <div class="notepad"></div>
+    {% block content%}
+
+    <h1 class="Log_in_text">Log in</h1>
+    <form action="dummy1" method="POST" autocomplete="off">
+      {% csrf_token %}
+      <div class="username">
+        <label class="usernameL"> username:</label> <br>
+        <input
+          class="usernameI"
+          type="text"
+          name="username"
+          placeholder="Username" />
+      </div>
+
+      <div class="password">
+        <label class="passwordL"> password:</label> <br>
+        <input
+          class="passwordI"
+          type="password"
+          name="password"
+          placeholder="Password"
+          autocomplete="off" />
+      </div> <br>
+      <input type="submit" name="submit" value="Log in" class="submit" />
+    </form>
+    {%endblock%}
+    
+    <a href="indexpage" class="Home"><button >Home</button></a>
+    <pre class="Text" style="line-height: 1.4; width: 150px">
+      Introducing Your Ally: The Ultimate To-Do List
+      website for Seamless Productivity!
+      Elevate your organization game, track your
+      progress and conquer your tasks like a pro!
+    </pre>
+  </body>
+  <script src="{%static 'js/Log_in_page_js.js'%}"></script>
+</html>

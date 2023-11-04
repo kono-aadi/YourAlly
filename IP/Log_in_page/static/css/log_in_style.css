@@ -1,0 +1,113 @@
+:root {
+  --blur_bg_radius: 0px;
+  --font_size: 0px;
+  --name_font_size: 0px;
+  --logo_height: 0px;
+  --logo_width: 0px;
+  --logo_margin: 0px;
+  --input_width: 0px;
+  --input_height: 0px;
+  --log_in_font_size: 0px;
+  --margin_left_submit: 0px;
+  --submit_width :0px;
+  --submit_height:0px;
+  --input_font_size: 0px;
+  --submit_font_size:0px;
+}
+
+.notepad {
+  border-radius: var(--blur_bg_radius);
+  grid-area: 3/22/15/31;
+  border: solid 0.001px white;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+.username {
+  font-size: var(--font_size);
+  align-self: center;
+  align-items: center;
+  line-height: 2;
+}
+.usernameI {
+  width: var(--input_width);
+}
+.password {
+  font-size: var(--font_size);
+  align-self: center;
+  align-items: center;
+  line-height: 2;
+}
+.passwordI {
+  width: var(--input_width);
+}
+.name {
+  color: white;
+  grid-column-start: 3;
+  font-size: var(--name_font_size);
+}
+
+label {
+  color: white;
+}
+
+.Text {
+  color: white;
+  grid-area: 7/4/13/19;
+  font-size: var(--font_size);
+  padding: 0px;
+}
+
+.logo {
+  width: var(--logo_width);
+  height: var(--logo_height);
+  margin: var(--logo_margin);
+}
+/* here */
+
+input {
+  background-color: transparent;
+  height: var(--input_height);
+  color: white;
+  border: calc(var(--submit_font_size)/100) white solid;
+  border-radius: var(--submit_font_size);
+  padding-left: var(--submit_font_size);
+  font-size: var(--input_font_size);
+}
+.submit {
+  width: var(--submit_width);
+  font-size: var(--submit_font_size);
+  color: black;
+  background-color: white;
+  margin-left: calc(var(--submit_font_size)* -1);
+}
+
+form {
+  grid-area: 6/23/13/30;
+  display: grid;
+}
+
+.Log_in_text {
+  color: white;
+  grid-area: 4/25/4/28;
+  align-self: center;
+  font-size: var(--log_in_font_size);
+}
+
+.Home{
+  grid-area: 1/32/1/34;
+  margin-top: var(--logo_margin);
+}
+
+button {
+  background-color: white;
+  border-radius: var(--blur_bg_radius);
+  width: 100%;
+  height: 75%;
+  align-self: center;
+  color: black;
+  border: none;
+  font-size: var(--blur_bg_radius);
+
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourAlly</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/sign_up_style.css'%}" />
+  </head>
+
+  <style>
+    body {
+      display: grid;
+      background-image: url("{%static 'images/user_auth_page_bg.jpg'%}");
+      background-size: cover;
+      margin: 0px;
+    }
+  </style>
+  <!--2nd styling-->
+  <style id="Style_BODY">
+    body {
+      grid-template-columns: repeat(34, 55px);
+      grid-template-rows: repeat(18, 54px);
+    }
+  </style>
+
+  <body>
+    {%block content%}
+    <form action="dummy" id="form" autocomplete="off" method="POST">
+      {% csrf_token%}
+      <div class="fname">
+        <label class="fnameL">First name:</label><br />
+        <input
+          id="fnameI"
+          type="text"
+          name="first_name"
+          placeholder="first name" />
+      </div>
+
+      <div class="Lname">
+        <label class="LnameL">Last name:</label><br />
+        <input
+          id="LnameI"
+          type="text"
+          name="last_name"
+          placeholder="last name" />
+      </div>
+
+      <div class="email">
+        <label class="emailL">Email:</label><br />
+        <input id="emailI" type="text" name="email" placeholder="@gmail.com" />
+      </div>
+
+      <div class="username">
+        <label class="usernameL">Username:</label><br />
+        <input
+          id="usernameI"
+          type="text"
+          name="username"
+          placeholder="username" />
+      </div>
+
+      <div class="password">
+        <label class="passwordL">Password:</label><br />
+        <input 
+        type="password"
+        name="password"
+        placeholder="password" />
+      </div>
+
+      <div class="submit">
+        <button type="submit" class="submitB" value="submit">Submit</button>
+      </div>
+    </form>
+
+    {%endblock%}
+  </body>
+  <body>
+    <div class="blur_bg"></div>
+    <a href="indexpage">
+      <img class="logo" src="{% static 'images/logo.jpeg' %}" alt="logo" />
+    </a>
+    
+    <a href="indexpage" class="Home"><button >Home</button></a>
+    <h1 class="name">YourAlly</h1>
+
+    <p class="Text" style="line-height: 1.4">
+      Introducing Your Ally: The Ultimate To-Do List website for Seamless
+      Productivity! Elevate your organization game, track your progress and
+      conquer your tasks like a <strong>pro!</strong>
+    </p>
+  </body>
+  <script src="{%static 'js/sign_up_page_js.js'%}"></script>
+</html>

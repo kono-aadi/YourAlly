@@ -1,0 +1,67 @@
+:root{
+  --logo_width:0px;
+  --logo_height :0px;
+  --name_font_size :0px;
+  --text_font_size :0px;
+  --button_height:0px;
+  --button_width:0px;
+  --border_radius_blurbg:0px;
+  --button_font_size:0px;
+  --border_radius_button:0px;
+  --line_spacing:0px;
+}
+
+button{
+  font-size: var(--button_font_size);
+}
+button {
+  color: #181818;
+  border-radius: var(--border_radius_button);
+  background-color: white;
+  margin-top: 10px;
+  border: none;
+  width: var(--button_width);
+  height: var(--button_height);
+}
+
+.logo{
+  width: var(--logo_height);
+  grid-area: 4/15/8/21;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.log_in{
+  grid-area: 1/30/ auto/auto;
+}
+.sign_up {
+  grid-area: 1/32 / auto/auto;
+}
+.text {
+  color: white;
+  grid-area: 11/11/14/27;
+  font-size: var(--text_font_size);
+  line-height: 1.5;
+  font-family: "monospace", "monaco";
+  align-self: center;
+}
+.name {
+  grid-area: 9/14 / 9/22;
+  font-size: var(--name_font_size);
+  color: white;
+  font-family: "monospace", "Lucidatypewriter";
+  margin-top: 0px;
+  align-self: center;
+  justify-self: center;
+  letter-spacing: var(--line_spacing);
+}
+
+.blur_bg {
+  background: transparent;
+  z-index: -1;
+  grid-area: 3/8/17/29;
+  border-radius: var(--border_radius_blurbg);
+  backdrop-filter: blur(var(--line_spacing));
+  border: 1px solid rgba(255, 255, 255, 0.412);
+}

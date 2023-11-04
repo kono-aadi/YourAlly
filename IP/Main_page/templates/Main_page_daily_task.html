@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourAlly</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/Main_page_style.css'%}" />
+  </head>
+  <style>
+    body {
+      margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(32, 56.2px);
+    grid-template-rows: repeat(18, 54px);
+    background-image: url("{% static 'images/main_page_bg.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+  }
+  
+  </style>
+
+  
+  <body>
+    <img class="logo" src="{% static 'images/logo.jpeg' %}" alt="logo" />
+    <h1 class="name">YourAlly</h1>
+    <form action="mainpagedailytask" class="one_day_task"><button >Daily task</button></form>
+    <form action="mainpageonetimetask" class="daily_task"><button >One Day Task</button></form>
+
+
+    <button class="add_task">+</button>
+
+    <input type="date">
+
+
+<!--
+
+    <div class="Graph"></div>
+
+    <pre class="days">Sn  Mn  Ts  Wd  Th  Fr  St</pre>
+-->
+    <img class="user" src="{%static 'images/user.png'%}" alt="User" />
+
+
+    <div id="box"></div>
+  </body>
+  <script src="{%static 'js/Main_page_daily_task_js.js'%}"></script>
+</html>
