@@ -40,3 +40,4 @@ function change_css_file(a, b, c, d, e, f, g) {
   document.documentElement.style.setProperty("--text_indent", `${f}px`);
   document.documentElement.style.setProperty("--border_size", `${g}px`);
 }
+let a= document.getElementById('check').textContent;

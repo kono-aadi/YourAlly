@@ -25,13 +25,14 @@
   </style>
 
   <body>
+    <h1 style="grid-area: 5/5;" id="check">{{check}}</h1>
     {%block content%}
-    <form action="dummy" id="form" autocomplete="off" method="POST">
+    <form action="{% url 'register' %}" id="form" autocomplete="off" method="POST">
       {% csrf_token%}
       <div class="fname">
         <label class="fnameL">First name:</label><br />
         <input
-          id="fnameI"
+          id="fnameI"n
           type="text"
           name="first_name"
           placeholder="first name" />
@@ -59,6 +60,10 @@
           name="username"
           placeholder="username" />
       </div>
+
+      {% if error_message %}
+      <p class="error-message">{{ errormsg }}</p>
+      {% endif %} 
 
       <div class="password">
         <label class="passwordL">Password:</label><br />

@@ -32,7 +32,7 @@
     {% block content%}
 
     <h1 class="Log_in_text">Log in</h1>
-    <form action="dummy1" method="POST" autocomplete="off">
+    <form action="{% url 'login' %}" method="POST" autocomplete="off">
       {% csrf_token %}
       <div class="username">
         <label class="usernameL"> username:</label> <br>
@@ -55,6 +55,8 @@
       <input type="submit" name="submit" value="Log in" class="submit" />
     </form>
     {%endblock%}
+
+  
     
     <a href="indexpage" class="Home"><button >Home</button></a>
     <pre class="Text" style="line-height: 1.4; width: 150px">
