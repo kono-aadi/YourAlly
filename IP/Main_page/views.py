@@ -3,6 +3,7 @@ from .models import Task_add as Task_addition
 from django.db import transaction
 import mysql.connector as m
 import json
+from django.contrib.auth import logout
 # Create your views here.
 id=1
 
@@ -21,7 +22,7 @@ def Main_page_one_time_task(request):
     Task_add.Id= id
 
     sql = 'select * from main_page_task_add;'
-    con = m.connect(host='localhost', user='root',password='root', database='ip_project', port='3308')
+    con = m.connect(host='localhost', user='root',password='root', database='ip_project', port='3306')
     cur = con.cursor()
     cur.execute(sql)
 
@@ -69,6 +70,12 @@ def delete_task(request,task_id):
     Task_ID=Task_addition.objects.get(Id=task_id)
     Task_ID.delete()
     return redirect('main-page-one-time-task')
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('login')  
+    return redirect('login') 
 
 
 
