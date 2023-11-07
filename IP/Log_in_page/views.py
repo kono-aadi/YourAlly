@@ -17,11 +17,12 @@ def login(request):
         
         try:
             user_data = Log_in_datas.objects.get(username=username, password=password)
+
         except Log_in_datas.DoesNotExist:
             return redirect('login')
 
         
-        return redirect('main-page-one-time-task') 
+        return redirect(f'mainpageonetimetask/{username}') 
 
     return render(request, "log_in.html")
 
