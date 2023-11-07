@@ -37,6 +37,7 @@ function add() {
   }
 }
 
+let List_of_Tasks1 = document.getElementById("List_of_Tasks_main").textContent;
 
 
 function add_task() {

@@ -24,13 +24,12 @@ from Main_page import views as main_view
 
 urlpatterns = [
     path('admin/'               ,    admin.site.urls                          ),
-    path(''                     ,    index_view.index                         ),
-    path('loginpage'            ,    log_in_view.Log_in                       ),
-    path('indexpage'            ,    index_view.index                         ),
-    path('signuppage'           ,    sign_up_view.sign_up                     ),
-    path('dummy'                ,    sign_up_view.dummy1                      ),
-    path('dummy1'               ,    log_in_view.dummy2                       ),
-    path('mainpageonetimetask'  ,    main_view.Main_page_one_time_task,name='main-page-one-time-task'        ),
+    path('loginpage'            ,    log_in_view.login , name='login'                      ),
+    path('indexpage'            ,    index_view.index                , name='indexpage'         ),
+    path('signuppage'           ,    sign_up_view.register , name='register'                    ),
+    path('mainpageonetimetask/<str:user>'  ,    main_view.Main_page_one_time_task,name='main-page-one-time-task'),
     path('delete_task/<int:task_id>',    main_view.delete_task, name='delete-task'),
+    path('logout/', main_view.logout_view, name='logout'),
+
 
 ]
