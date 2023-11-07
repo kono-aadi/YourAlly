@@ -20,7 +20,8 @@
   </style>
 
   <body>
-    <img class="logo" src="{% static 'images/logo.jpeg' %}" alt="logo" />
+    <form action="indexpage"><button class="logo"><img class="logo_img" src="{% static 'images/logo.jpeg' %}" alt="logo"/></button></form>
+    
     <h1 class="name">YourAlly</h1>
 
     <form action="mainpagedailytask" class="one_day_task">
@@ -42,7 +43,14 @@
     <div class="Graph"></div>
 
     <pre class="days">Sn  Mn  Ts  Wd  Th  Fr  St</pre>
+
 -->
+
+  <form action="logout" class="Logout">
+    <button>Logout</button> 
+  </form>
+
+
     <div id="pop_up">
       <form action="" method="POST" id="Add_task_input" autocomplete="off">
         {%csrf_token%}
@@ -87,7 +95,7 @@
             <div class="date">id: {{i.3}}</div>
             <div class="time">Time: {Time}</div>
             <div class="content">Description:<br> {{i.1}}</div>
-            <a href= "{% url 'delete-task' i.3 %}" class="delete"> <div ><button>Delete</button></div></a>
+            <a href= "{% url 'delete-task' i.3  %}" class="delete"> <div ><button>Delete</button></div></a>
             <a href= "{% url 'delete-task' i.3 %}" class="completed"> <div ><button>Done</button></div></a>
         </div>
       </div>

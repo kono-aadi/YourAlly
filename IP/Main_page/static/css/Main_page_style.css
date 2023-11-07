@@ -13,17 +13,23 @@ button {
 }
 
 .daily_task {
-  grid-area: 1/27/2/29;
+  grid-area: 1/26/2/28;
 }
 
 .one_day_task {
-  grid-area: 1/30/2/32;
+  grid-area: 1/29/2/31;
 }
 
 .logo {
   width: 70px;
   height: 70px;
   margin: 15px;
+}
+
+.logo_img{
+  
+  width: 70px;
+  height: 70px;
 }
 
 .name {
@@ -195,4 +201,8 @@ input:checked {
 #Add_task_input_Text_sumbit {
   grid-area: 20/12 / auto/14;
   color: black;
+}
+.Logout{
+  grid-area: 1/32/1/33 ;
+  margin-left: -15px;
 }

@@ -100,6 +100,10 @@ form {
   margin-top: var(--logo_margin);
 }
 
+.Home_text{
+  font-size: var(--input_font_size);
+}
+
 button {
   background-color: white;
   border-radius: var(--blur_bg_radius);
