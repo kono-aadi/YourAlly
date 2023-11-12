@@ -22,13 +22,14 @@ function ChangeValues() {
   let Button_font_size=altered_width*0.3606557;
   let Border_radius_button=altered_width*0.196721311;
   let Line_spacing=altered_width*0.0892;
+  let Img_width = altered_width*3;
 
-  change_css_file(logo_width,logo_height,Name_font_size,Text_font_szie,Border_radius_blurbg,Button_width,Button_height,Button_font_size,Border_radius_button,Line_spacing);
+  change_css_file(logo_width,logo_height,Name_font_size,Text_font_szie,Border_radius_blurbg,Button_width,Button_height,Button_font_size,Border_radius_button,Line_spacing,Img_width);
 }
 
 //1.573770
 
-function change_css_file(x,y,z,u,v,q,e,i,j,k){
+function change_css_file(x,y,z,u,v,q,e,i,j,k,l){
     document.documentElement.style.setProperty("--logo_width",`${x}px`);
     document.documentElement.style.setProperty("--logo_height",`${y}px`);
     document.documentElement.style.setProperty("--name_font_size",`${z}px`);
@@ -39,4 +40,7 @@ function change_css_file(x,y,z,u,v,q,e,i,j,k){
     document.documentElement.style.setProperty("--button_font_size",`${i}px`);
     document.documentElement.style.setProperty("--border_radius_button",`${j}px`);
     document.documentElement.style.setProperty("--line_spacing",`${k}px`);
+    document.documentElement.style.setProperty("--img_width",`${l}px`);
 }
+let width = window.innerWidth;
+let altered_width = width / 33 - 0.5;

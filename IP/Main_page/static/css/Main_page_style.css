@@ -24,12 +24,7 @@ button {
   width: 70px;
   height: 70px;
   margin: 15px;
-}
-
-.logo_img{
-  
-  width: 70px;
-  height: 70px;
+  margin-left: 15px;
 }
 
 .name {
