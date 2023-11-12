@@ -4,9 +4,24 @@ from django.db import transaction
 import mysql.connector as m
 import json
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+
+
+def Function(request,user):
+    if user.is_authenticated:
+        Main_page_one_time_task(request,user)
+    else:
+        return redirect('login')
+
+
+
+
+
+
+
 # Create your views here.
 id=1
-
+@login_required
 @transaction.atomic
 def Main_page_one_time_task(request,user):
     global List_of_Tasks
@@ -14,6 +29,7 @@ def Main_page_one_time_task(request,user):
 
     Task_head = request.POST.get('Task_heading')
     Task_desc = request.POST.get('Task_description')
+    global username
     username=user
 
 
@@ -40,11 +56,7 @@ def Main_page_one_time_task(request,user):
             Task_add.save()
             id+=1
 
-
-
     temp=0
-
-
 
 
     l = []
@@ -71,7 +83,8 @@ def delete_task(request,task_id):
 
     Task_ID=Task_addition.objects.get(Id=task_id)
     Task_ID.delete()
-    return redirect('main-page-one-time-task')
+    a='main-page-one-time-task/{}'.format(username)
+    return redirect('main-page-one-time-task',username  )
 
 def logout_view(request):
     if request.method == 'POST':

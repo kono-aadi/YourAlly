@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/'               ,    admin.site.urls                          ),
     path('loginpage'            ,    log_in_view.login , name='login'                      ),
     path('indexpage'            ,    index_view.index                , name='indexpage'         ),
+    path(''            ,    index_view.index                , name='indexpage'         ),
     path('signuppage'           ,    sign_up_view.register , name='register'                    ),
     path('mainpageonetimetask/<str:user>'  ,    main_view.Main_page_one_time_task,name='main-page-one-time-task'),
     path('delete_task/<int:task_id>',    main_view.delete_task, name='delete-task'),

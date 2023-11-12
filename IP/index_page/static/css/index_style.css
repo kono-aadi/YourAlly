@@ -9,6 +9,7 @@
   --button_font_size:0px;
   --border_radius_button:0px;
   --line_spacing:0px;
+  --img_width:0px;
 }
 
 button{
@@ -25,10 +26,11 @@ button {
 }
 
 .logo{
-  width: var(--logo_height);
+  width: var(--img_width);
   grid-area: 4/15/8/21;
   align-self: center;
   justify-self: center;
+  border-radius: var(--button_font_size);
 }
 
 
